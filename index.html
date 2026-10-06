@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06352b">
+  <title>Bangladesh Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <header class="topbar">
+    <button class="round-btn" onclick="toggleMenu()">☰</button>
+    <div class="brand" onclick="go('home')">
+      <div class="flag"><span></span></div>
+      <div>
+        <div class="brand-title"><b>Bangladesh</b> Explorer</div>
+        <div class="brand-sub">আমার বাংলাদেশ — ৬৪ জেলার জ্ঞানভাণ্ডার</div>
+      </div>
+    </div>
+    <div class="top-right">
+      <button class="round-btn" onclick="focusSearch()">⌕</button>
+      <button class="theme-switch" onclick="toggleTheme()"><span>☀</span><i></i><span>☾</span></button>
+    </div>
+  </header>
+
+  <aside id="sideMenu" class="side-menu">
+    <div class="side-head"><b>Bangladesh Explorer</b><button onclick="toggleMenu()">✕</button></div>
+    <button onclick="go('home');toggleMenu()">🏠 হোম</button>
+    <button onclick="go('map');toggleMenu()">🗺️ ইন্টার‌্যাক্টিভ ম্যাপ</button>
+    <button onclick="go('districts');toggleMenu()">📍 ৬৪ জেলা</button>
+    <button onclick="go('knowledge');toggleMenu()">📚 বাংলাদেশ জ্ঞান</button>
+    <button onclick="go('quiz');toggleMenu()">🎯 কুইজ</button>
+    <button onclick="openAdmin();toggleMenu()">⚙️ Admin Panel</button>
+  </aside>
+
+  <main id="main"></main>
+
+  <nav class="bottom-nav">
+    <button onclick="go('home')"><span>⌂</span>হোম</button>
+    <button onclick="go('districts')"><span>♧</span>জেলা</button>
+    <button onclick="go('map')"><span>⌖</span>মানচিত্র</button>
+    <button onclick="go('knowledge')"><span>▤</span>বাংলাদেশ জ্ঞান</button>
+    <button onclick="go('quiz')"><span>♡</span>কুইজ</button>
+    <button onclick="showMore()"><span>•••</span>আরও</button>
+  </nav>
+</div>
+
+<div id="modal" class="modal hidden"></div>
+<script src="script.js"></script>
+</body>
+</html>
